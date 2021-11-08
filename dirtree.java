@@ -7,12 +7,6 @@ class dirtree{
     public static void main(String args[]) {
         new dirtree();
     }
-    void println(String in) {
-        System.out.println(in);
-    }
-    void print(String in) {
-        System.out.print(in);
-    }
     void realSearch(String rootpath,int limitlevel) {
         printlist(rootpath, 0,limitlevel);
       }
@@ -22,9 +16,9 @@ class dirtree{
           String names[] = file.list();
           for (int i = 0; i < names.length; i++) {
             for (int j = 0; j < level; j++) {
-              print("\t");
+                System.out.print("\t");
             }
-            println(names[i]);
+            System.out.println(names[i]);
             printlist(dir + "/" + names[i], level+1,limitlevel);
           }
         }
